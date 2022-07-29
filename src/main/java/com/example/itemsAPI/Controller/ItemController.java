@@ -19,7 +19,7 @@ public class ItemController{
         this.itemRepository = itemRepository;
     }
 
-    @GetMapping("/all")
+    @GetMapping
     public Iterable<Item> getItems(){
         return itemRepository.findAll();
     }
