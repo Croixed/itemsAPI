@@ -1,5 +1,7 @@
 package com.example.itemsAPI.repository.entity;
 
+import com.example.itemsAPI.Controller.dto.ItemDto;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,6 +19,17 @@ public class Item
     private String description;
 
     private String imageUrl;
+
+    public Item()
+    {
+    }
+
+    public Item( ItemDto itemDto )
+    {
+        this.name = itemDto.getName();
+        this.description = itemDto.getDescription();
+        this.imageUrl = itemDto.getImageUrl();
+    }
 
     public Integer getId()
     {
