@@ -34,8 +34,9 @@ public class ItemServiceMySQL implements ItemService {
     }
 
     @Override
-    public Optional<Item> findById(int itemId) {
-        return itemRepository.findById(itemId);
+    public Item findById(int itemId) {
+        Optional<Item> item = itemRepository.findById(itemId);
+        return item.orElse(null);
     }
 
 

@@ -12,5 +12,5 @@ public interface ItemService {
 
     List<Item> all();
 
-    Optional<Item> findById(int itemId );
+    Item findById(int itemId );
 }
